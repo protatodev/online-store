@@ -1,0 +1,7 @@
+<h2>Marketplace</h2>
+
+<div *ngFor="let album of albums" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em><a [routerLink]="['/albums', album.id]">{{album.title}}</a></em> by {{album.artist}}</h3>
+  </div>
+</div>
