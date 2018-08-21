@@ -19,10 +19,9 @@ export class AlbumService {
     this.albums.push(newAlbum);
   }
 
-  // getAlbumById(id: number) {
-  //   const album: Album = ALBUMS.find(foundAlbum => foundAlbum.id == id);
-  
-  //   return album;
-  // }
+  getAlbumById(albumId: string) {
+    return this.database.object('albums/' + albumId);
+    
+  }
 
 }

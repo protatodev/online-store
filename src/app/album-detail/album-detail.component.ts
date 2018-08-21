@@ -10,14 +10,14 @@ import { AlbumService } from '../album.service';
   providers: [AlbumService]
 })
 export class AlbumDetailComponent implements OnInit {
-  albumId: number = null;
-  existingAlbum: Album = null;
+  albumId: string = null;
+  existingAlbum;
 
   constructor(private route: ActivatedRoute, private albumService: AlbumService) { }
 
   ngOnInit() {
       this.albumId = this.route.snapshot.params.id;
-      //this.existingAlbum = this.albumService.getAlbumById(this.albumId);
+      this.existingAlbum = this.albumService.getAlbumById(this.albumId);
   }
 
 }

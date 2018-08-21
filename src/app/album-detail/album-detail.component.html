@@ -1,4 +1,3 @@
-<h2>This album has id number: {{albumId}}</h2>
-<h3>Title: {{existingAlbum.title}}</h3>
-<h3>Artist: {{existingAlbum.artist}}</h3>
-<h3>Description: {{existingAlbum.description}}</h3>
+<h2>Title: {{(existingAlbum | async)?.title}}</h2>
+<h3>Artist: {{(existingAlbum | async)?.artist}}</h3>
+<h3>Description: {{(existingAlbum | async)?.description}}</h3>
