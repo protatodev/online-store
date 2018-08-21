@@ -17,7 +17,7 @@ export class AlbumDetailComponent implements OnInit {
 
   ngOnInit() {
       this.albumId = this.route.snapshot.params.id;
-      this.existingAlbum = this.albumService.getAlbumById(this.albumId);
+      //this.existingAlbum = this.albumService.getAlbumById(this.albumId);
   }
 
 }

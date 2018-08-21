@@ -15,10 +15,14 @@ export class AlbumService {
     return this.albums;
   }
 
-  getAlbumById(id: number) {
-    const album: Album = ALBUMS.find(foundAlbum => foundAlbum.id == id);
-  
-    return album;
+  addAlbum(newAlbum: Album) {
+    this.albums.push(newAlbum);
   }
+
+  // getAlbumById(id: number) {
+  //   const album: Album = ALBUMS.find(foundAlbum => foundAlbum.id == id);
+  
+  //   return album;
+  // }
 
 }
